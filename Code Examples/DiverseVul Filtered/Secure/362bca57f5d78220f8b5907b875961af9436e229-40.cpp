@@ -1,0 +1,1 @@
+static inline int snd_pcm_stream_proc_init(struct snd_pcm_str *pstr) { return 0; }

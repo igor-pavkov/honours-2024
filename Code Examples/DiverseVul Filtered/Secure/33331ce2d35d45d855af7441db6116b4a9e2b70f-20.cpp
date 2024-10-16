@@ -1,0 +1,1 @@
+    virtual AP4_Result Tell(AP4_Position& position) { position = m_Size; return AP4_SUCCESS; }

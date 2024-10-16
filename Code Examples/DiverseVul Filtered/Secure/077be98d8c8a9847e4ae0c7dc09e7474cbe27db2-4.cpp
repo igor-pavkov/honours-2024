@@ -1,0 +1,42 @@
+static void show_help()
+{
+    fprintf(
+        stdout,
+        "Sender Rewriting Scheme implementation for Postfix.\n\n"
+        "Implements two TCP lookup tables to rewrite mail addresses\n"
+        "as needed. The forward SRS is for sender envelope addresses\n"
+        "to prevent SPF-related bounces. The reverse SRS is for\n"
+        "recipient envelope addresses so that bounced mails can be\n"
+        "routed back to their original sender.\n"
+        "\n"
+        "Usage: %s -s<file> -d<domain> [other options]\n"
+        "Options:\n"
+        "   -s<file>       read secrets from file (required)\n"
+        "   -d<domain>     set domain name for rewrite (required)\n"
+        "   -a<char>       set first separator character which can be one of: "
+        "-=+ (default: =)\n"
+        "   -n<num>        length of hash to be used in rewritten addresses "
+        "(default: 4)\n"
+        "   -N<num>        minimum length of hash to accept for validation "
+        "(default: 4)\n"
+        "   -l<addr>       set socket listen address (default: 127.0.0.1)\n"
+        "   -f<port>       set port for the forward SRS lookup (default: "
+        "10001)\n"
+        "   -r<port>       set port for the reverse SRS lookup (default: "
+        "10002)\n"
+        "   -p<pidfile>    write process ID to pidfile (default: none)\n"
+        "   -c<dir>        chroot to <dir> (default: none)\n"
+        "   -u<user>       switch user id after port bind (default: none)\n"
+        "   -t<seconds>    timeout for idle client connections (default: "
+        "1800)\n"
+        "   -X<domain>     exclude additional domain from address rewriting\n"
+        "   -A             always rewrite addresses\n"
+        "   -e             attempt to read above parameters from environment\n"
+        "   -D             fork into background\n"
+        "   -4             force IPv4 socket (default: any)\n"
+        "   -6             force IPv6 socket (default: any)\n"
+        "   -h             show this help\n"
+        "   -v             show version\n"
+        "\n",
+        self);
+}

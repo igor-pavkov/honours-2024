@@ -1,0 +1,1 @@
+      static cimg_int64 max() { return (cimg_int64)((cimg_uint64)-1>>1); }

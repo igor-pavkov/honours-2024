@@ -1,0 +1,6 @@
+PHP_MSHUTDOWN_FUNCTION(filter)
+{
+	UNREGISTER_INI_ENTRIES();
+
+	return SUCCESS;
+}

@@ -1,0 +1,1 @@
+      static half cut(const double val) { return (half)val; }

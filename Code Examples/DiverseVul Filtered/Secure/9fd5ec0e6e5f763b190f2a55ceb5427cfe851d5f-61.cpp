@@ -1,0 +1,4 @@
+PDFDoc::PDFDoc()
+{
+  init();
+}

@@ -1,0 +1,3 @@
+HeifContext::Image::~Image()
+{
+}

@@ -1,0 +1,1 @@
+static inline int hrtimer_cb_pending(struct hrtimer *timer) { return 0; }

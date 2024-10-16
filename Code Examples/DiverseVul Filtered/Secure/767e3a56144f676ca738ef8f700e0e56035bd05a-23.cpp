@@ -1,0 +1,1 @@
+    SG_Exception::~SG_Exception() {}

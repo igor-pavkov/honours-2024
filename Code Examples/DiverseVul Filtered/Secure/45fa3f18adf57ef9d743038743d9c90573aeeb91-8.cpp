@@ -1,0 +1,1 @@
+static ALWAYS_INLINE void progress_meter(int flag UNUSED_PARAM) {}

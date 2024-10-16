@@ -1,0 +1,1 @@
+  bool eof() override { return m_zipFile == nullptr; }

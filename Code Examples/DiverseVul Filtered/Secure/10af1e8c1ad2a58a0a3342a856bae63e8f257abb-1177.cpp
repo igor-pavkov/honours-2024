@@ -1,0 +1,1 @@
+      static const char* string() { static const char *const s = "bool"; return s; }

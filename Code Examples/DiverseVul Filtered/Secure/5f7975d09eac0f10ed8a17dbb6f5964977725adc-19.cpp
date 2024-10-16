@@ -1,0 +1,1 @@
+  std::vector<float> GetOutput() { return ExtractVector<float>(output_); }

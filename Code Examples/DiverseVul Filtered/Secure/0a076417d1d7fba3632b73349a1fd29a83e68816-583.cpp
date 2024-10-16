@@ -1,0 +1,3 @@
+    BSONObj expectedResult() {
+        return operand();
+    }

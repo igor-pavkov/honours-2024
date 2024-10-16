@@ -1,0 +1,1 @@
+  explicit QuantizedMulOp(OpKernelConstruction* context) : OpKernel(context) {}

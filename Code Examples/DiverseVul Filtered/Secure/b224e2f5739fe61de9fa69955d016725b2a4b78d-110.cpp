@@ -1,0 +1,2 @@
+SplashAxialPattern::~SplashAxialPattern() {
+}

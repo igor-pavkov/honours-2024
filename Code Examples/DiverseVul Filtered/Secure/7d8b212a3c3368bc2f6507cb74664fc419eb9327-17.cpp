@@ -1,0 +1,3 @@
+RtmpProtocol::~RtmpProtocol() {
+    reset();
+}

@@ -1,0 +1,70 @@
+static const OptionInfo *GetOptionInfo(const CommandOption option)
+{
+  switch (option)
+  {
+    case MagickAlignOptions: return(AlignOptions);
+    case MagickAlphaChannelOptions: return(AlphaChannelOptions);
+    case MagickBooleanOptions: return(BooleanOptions);
+    case MagickCacheOptions: return(CacheOptions);
+    case MagickChannelOptions: return(ChannelOptions);
+    case MagickClassOptions: return(ClassOptions);
+    case MagickClipPathOptions: return(ClipPathOptions);
+    case MagickColorspaceOptions: return(ColorspaceOptions);
+    case MagickCommandOptions: return(CommandOptions);
+    case MagickComplianceOptions: return(ComplianceOptions);
+    case MagickComplexOptions: return(ComplexOptions);
+    case MagickComposeOptions: return(ComposeOptions);
+    case MagickCompressOptions: return(CompressOptions);
+    case MagickDataTypeOptions: return(DataTypeOptions);
+    case MagickDebugOptions: return(LogEventOptions);
+    case MagickDecorateOptions: return(DecorateOptions);
+    case MagickDirectionOptions: return(DirectionOptions);
+    case MagickDisposeOptions: return(DisposeOptions);
+    case MagickDistortOptions: return(DistortOptions);
+    case MagickDitherOptions: return(DitherOptions);
+    case MagickEndianOptions: return(EndianOptions);
+    case MagickEvaluateOptions: return(EvaluateOptions);
+    case MagickFillRuleOptions: return(FillRuleOptions);
+    case MagickFilterOptions: return(FilterOptions);
+    case MagickFunctionOptions: return(FunctionOptions);
+    case MagickGradientOptions: return(GradientOptions);
+    case MagickGravityOptions: return(GravityOptions);
+    case MagickIntentOptions: return(IntentOptions);
+    case MagickInterlaceOptions: return(InterlaceOptions);
+    case MagickInterpolateOptions: return(InterpolateOptions);
+    case MagickKernelOptions: return(KernelOptions);
+    case MagickLayerOptions: return(LayerOptions);
+    case MagickLineCapOptions: return(LineCapOptions);
+    case MagickLineJoinOptions: return(LineJoinOptions);
+    case MagickListOptions: return(ListOptions);
+    case MagickLogEventOptions: return(LogEventOptions);
+    case MagickMetricOptions: return(MetricOptions);
+    case MagickMethodOptions: return(MethodOptions);
+    case MagickModeOptions: return(ModeOptions);
+    case MagickMorphologyOptions: return(MorphologyOptions);
+    case MagickNoiseOptions: return(NoiseOptions);
+    case MagickOrientationOptions: return(OrientationOptions);
+    case MagickPixelChannelOptions: return(PixelChannelOptions);
+    case MagickPixelIntensityOptions: return(PixelIntensityOptions);
+    case MagickPixelMaskOptions: return(PixelMaskOptions);
+    case MagickPixelTraitOptions: return(PixelTraitOptions);
+    case MagickPolicyDomainOptions: return(PolicyDomainOptions);
+    case MagickPolicyRightsOptions: return(PolicyRightsOptions);
+    case MagickPreviewOptions: return(PreviewOptions);
+    case MagickPrimitiveOptions: return(PrimitiveOptions);
+    case MagickQuantumFormatOptions: return(QuantumFormatOptions);
+    case MagickResolutionOptions: return(ResolutionOptions);
+    case MagickResourceOptions: return(ResourceOptions);
+    case MagickSparseColorOptions: return(SparseColorOptions);
+    case MagickStatisticOptions: return(StatisticOptions);
+    case MagickStorageOptions: return(StorageOptions);
+    case MagickStretchOptions: return(StretchOptions);
+    case MagickStyleOptions: return(StyleOptions);
+    case MagickTypeOptions: return(TypeOptions);
+    case MagickValidateOptions: return(ValidateOptions);
+    case MagickVirtualPixelOptions: return(VirtualPixelOptions);
+    case MagickWeightOptions: return(WeightOptions);
+    default: break;
+  }
+  return((const OptionInfo *) NULL);
+}

@@ -1,0 +1,1 @@
+    PromptBase() : promptPreviousInputLen(0) {}

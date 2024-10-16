@@ -1,0 +1,3 @@
+DxfData::DxfData()
+{
+}

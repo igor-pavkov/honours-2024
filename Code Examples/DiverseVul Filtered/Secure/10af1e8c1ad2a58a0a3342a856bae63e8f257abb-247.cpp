@@ -1,0 +1,1 @@
+      static unsigned short min() { return 0; }

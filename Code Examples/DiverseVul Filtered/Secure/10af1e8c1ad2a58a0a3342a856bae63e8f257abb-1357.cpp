@@ -1,0 +1,1 @@
+      static long double inf() { return max()*max(); }

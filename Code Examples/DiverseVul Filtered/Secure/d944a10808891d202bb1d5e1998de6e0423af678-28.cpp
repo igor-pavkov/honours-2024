@@ -1,0 +1,3 @@
+CSteamNetworkConnectionUDP::~CSteamNetworkConnectionUDP()
+{
+}

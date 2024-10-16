@@ -1,0 +1,1 @@
+  ByteVectorPrivate(const std::vector<char> &v) : RefCounter(), data(v), size(v.size()) {}

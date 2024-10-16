@@ -1,0 +1,1 @@
+  explicit RequantizationRangeOp(OpKernelConstruction* ctx) : OpKernel(ctx) {}

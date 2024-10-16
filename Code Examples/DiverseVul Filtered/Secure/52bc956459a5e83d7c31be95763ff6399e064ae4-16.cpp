@@ -1,0 +1,1 @@
+inline kj::ArrayPtr<const word> SegmentReader::getArray() { return ptr; }

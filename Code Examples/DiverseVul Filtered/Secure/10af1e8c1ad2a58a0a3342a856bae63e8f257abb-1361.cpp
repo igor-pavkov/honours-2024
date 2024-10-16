@@ -1,0 +1,1 @@
+#elif defined(cimg_main)

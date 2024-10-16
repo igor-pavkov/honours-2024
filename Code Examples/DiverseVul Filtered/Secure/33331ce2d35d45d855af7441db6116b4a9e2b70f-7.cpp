@@ -1,0 +1,1 @@
+    virtual AP4_Result Seek(AP4_Position) { return AP4_ERROR_NOT_SUPPORTED; }

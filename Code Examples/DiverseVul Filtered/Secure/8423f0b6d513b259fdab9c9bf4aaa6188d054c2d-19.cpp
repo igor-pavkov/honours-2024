@@ -1,0 +1,23 @@
+static snd_pcm_format_t snd_pcm_oss_format_from(int format)
+{
+	switch (format) {
+	case AFMT_MU_LAW:	return SNDRV_PCM_FORMAT_MU_LAW;
+	case AFMT_A_LAW:	return SNDRV_PCM_FORMAT_A_LAW;
+	case AFMT_IMA_ADPCM:	return SNDRV_PCM_FORMAT_IMA_ADPCM;
+	case AFMT_U8:		return SNDRV_PCM_FORMAT_U8;
+	case AFMT_S16_LE:	return SNDRV_PCM_FORMAT_S16_LE;
+	case AFMT_S16_BE:	return SNDRV_PCM_FORMAT_S16_BE;
+	case AFMT_S8:		return SNDRV_PCM_FORMAT_S8;
+	case AFMT_U16_LE:	return SNDRV_PCM_FORMAT_U16_LE;
+	case AFMT_U16_BE:	return SNDRV_PCM_FORMAT_U16_BE;
+	case AFMT_MPEG:		return SNDRV_PCM_FORMAT_MPEG;
+	case AFMT_S32_LE:	return SNDRV_PCM_FORMAT_S32_LE;
+	case AFMT_S32_BE:	return SNDRV_PCM_FORMAT_S32_BE;
+	case AFMT_S24_LE:	return SNDRV_PCM_FORMAT_S24_LE;
+	case AFMT_S24_BE:	return SNDRV_PCM_FORMAT_S24_BE;
+	case AFMT_S24_PACKED:	return SNDRV_PCM_FORMAT_S24_3LE;
+	case AFMT_FLOAT:	return SNDRV_PCM_FORMAT_FLOAT;
+	case AFMT_SPDIF_RAW:	return SNDRV_PCM_FORMAT_IEC958_SUBFRAME;
+	default:		return SNDRV_PCM_FORMAT_U8;
+	}
+}

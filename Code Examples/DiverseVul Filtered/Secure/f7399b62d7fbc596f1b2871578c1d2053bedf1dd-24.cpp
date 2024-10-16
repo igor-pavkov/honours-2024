@@ -1,0 +1,3 @@
+HeifContext::~HeifContext()
+{
+}

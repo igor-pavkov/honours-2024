@@ -1,0 +1,1 @@
+  int64_t writeImpl(const char *buffer, int64_t length) override { return 0; }

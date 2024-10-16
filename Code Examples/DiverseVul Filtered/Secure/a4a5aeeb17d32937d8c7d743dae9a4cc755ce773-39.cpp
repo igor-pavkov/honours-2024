@@ -1,0 +1,1 @@
+void CWebSession::UpdateLastActive() { time(&m_tmLastActive); }

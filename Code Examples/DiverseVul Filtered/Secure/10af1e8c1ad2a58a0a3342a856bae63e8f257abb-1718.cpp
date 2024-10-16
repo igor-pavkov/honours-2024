@@ -1,0 +1,1 @@
+      static const char* format_s() { return "%g"; }

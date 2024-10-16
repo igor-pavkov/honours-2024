@@ -1,0 +1,1 @@
+      static cimg_int64 min() { return ~max(); }

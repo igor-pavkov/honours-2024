@@ -1,0 +1,1 @@
+int sqlite3KeyInfoIsWriteable(KeyInfo *p){ return p->nRef==1; }

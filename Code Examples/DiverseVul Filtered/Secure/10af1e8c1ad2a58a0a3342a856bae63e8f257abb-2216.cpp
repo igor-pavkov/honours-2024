@@ -1,0 +1,1 @@
+      static unsigned int min() { return 0; }

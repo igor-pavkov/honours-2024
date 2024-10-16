@@ -1,0 +1,1 @@
+      static short min() { return ~max(); }

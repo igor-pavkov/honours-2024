@@ -1,0 +1,1 @@
+static inline void hrtimer_init_timer_hres(struct hrtimer *timer) { }

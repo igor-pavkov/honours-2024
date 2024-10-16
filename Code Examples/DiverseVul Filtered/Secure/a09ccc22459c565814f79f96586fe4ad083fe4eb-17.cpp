@@ -1,0 +1,1 @@
+  void init () { gcc_assert (m_vr.undefined_p ()); }

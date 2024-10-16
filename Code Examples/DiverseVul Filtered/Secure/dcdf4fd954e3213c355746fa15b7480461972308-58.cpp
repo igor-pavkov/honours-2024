@@ -1,0 +1,1 @@
+  ByteVectorPrivate(TagLib::uint len, char value) : RefCounter(), data(len, value), size(len) {}

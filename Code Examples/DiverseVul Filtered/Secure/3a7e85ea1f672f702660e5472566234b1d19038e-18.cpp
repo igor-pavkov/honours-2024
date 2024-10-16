@@ -1,0 +1,1 @@
+            int startPosition() const { return _startPosition & ~(1 << 31); }

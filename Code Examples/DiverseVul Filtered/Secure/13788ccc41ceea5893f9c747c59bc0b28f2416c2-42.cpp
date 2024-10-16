@@ -1,0 +1,1 @@
+static inline int hrtimer_hres_active(void) { return 0; }

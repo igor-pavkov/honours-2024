@@ -1,0 +1,1 @@
+      static half max() { return (half)65504; }

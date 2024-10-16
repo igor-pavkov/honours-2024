@@ -1,0 +1,1 @@
+      static cimg_uint64 min() { return 0; }

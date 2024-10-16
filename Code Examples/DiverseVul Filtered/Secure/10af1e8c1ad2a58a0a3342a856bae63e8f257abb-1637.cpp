@@ -1,0 +1,1 @@
+      static bool is_nan(const char) { return false; }

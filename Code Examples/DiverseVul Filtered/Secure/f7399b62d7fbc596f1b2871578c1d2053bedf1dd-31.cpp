@@ -1,0 +1,1 @@
+  uint16_t get_columns() const { return m_columns; }

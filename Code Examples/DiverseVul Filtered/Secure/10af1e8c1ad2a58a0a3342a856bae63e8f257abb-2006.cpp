@@ -1,0 +1,1 @@
+      const CImg<T>& ref;

@@ -1,0 +1,1 @@
+      static const char* string() { static const char *const s = "signed char"; return s; }

@@ -1,0 +1,4 @@
+PHP_FUNCTION(ldap_list)
+{
+	php_ldap_do_search(INTERNAL_FUNCTION_PARAM_PASSTHRU, LDAP_SCOPE_ONELEVEL);
+}

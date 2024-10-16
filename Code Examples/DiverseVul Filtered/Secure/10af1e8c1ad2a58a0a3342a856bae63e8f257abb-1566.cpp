@@ -1,0 +1,1 @@
+      static long double max() { return LDBL_MAX; }

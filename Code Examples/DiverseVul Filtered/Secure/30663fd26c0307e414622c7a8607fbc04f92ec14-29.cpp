@@ -1,0 +1,6 @@
+static inline void gen_op_jnz_ecx(TCGMemOp size, TCGLabel *label1)
+{
+    tcg_gen_mov_tl(cpu_tmp0, cpu_regs[R_ECX]);
+    gen_extu(size, cpu_tmp0);
+    tcg_gen_brcondi_tl(TCG_COND_NE, cpu_tmp0, 0, label1);
+}

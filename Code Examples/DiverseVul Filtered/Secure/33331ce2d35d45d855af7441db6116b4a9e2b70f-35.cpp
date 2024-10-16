@@ -1,0 +1,1 @@
+    virtual AP4_Result GetSize(AP4_LargeSize& size) { size = m_Size;     return AP4_SUCCESS; }

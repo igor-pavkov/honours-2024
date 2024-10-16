@@ -1,0 +1,4 @@
+EbmlElement::~EbmlElement()
+{
+  assert(!bLocked);
+}

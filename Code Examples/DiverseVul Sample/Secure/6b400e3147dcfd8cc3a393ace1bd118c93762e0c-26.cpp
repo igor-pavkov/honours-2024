@@ -1,0 +1,1 @@
+    StrokeHandler(int reserve) : pts(reserve), types(reserve) {}

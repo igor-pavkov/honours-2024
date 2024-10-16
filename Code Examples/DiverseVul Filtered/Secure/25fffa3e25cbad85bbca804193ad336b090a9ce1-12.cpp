@@ -1,0 +1,44 @@
+void ImapModelOpenConnectionTest::testOkLogindisabledLater()
+{
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QVERIFY(SOCK->writtenStuff().isEmpty());
+    SOCK->fakeReading( "* OK foo\r\n" );
+    QVERIFY( completedSpy->isEmpty() );
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QCOMPARE( SOCK->writtenStuff(), QByteArray("y0 CAPABILITY\r\n") );
+    QVERIFY( completedSpy->isEmpty() );
+    SOCK->fakeReading( "* CAPABILITY IMAP4rev1 starttls LoGINDISABLED\r\ny0 OK capability completed\r\n" );
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QVERIFY( authSpy->isEmpty() );
+    QCOMPARE( SOCK->writtenStuff(), QByteArray("y1 STARTTLS\r\n") );
+    SOCK->fakeReading( "y1 OK will establish secure layer immediately\r\n");
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QVERIFY( authSpy->isEmpty() );
+    QCOMPARE( SOCK->writtenStuff(), QByteArray("[*** STARTTLS ***]y2 CAPABILITY\r\n") );
+    QVERIFY( completedSpy->isEmpty() );
+    QVERIFY( authSpy->isEmpty() );
+    SOCK->fakeReading( "* CAPABILITY IMAP4rev1\r\ny2 OK capability completed\r\n" );
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QCOMPARE( SOCK->writtenStuff(), QByteArray("y3 LOGIN luzr sikrit\r\n") );
+    QCOMPARE( authSpy->size(), 1 );
+    SOCK->fakeReading( "y3 OK [CAPABILITY IMAP4rev1] logged in\r\n");
+    QCoreApplication::processEvents();
+    QCoreApplication::processEvents();
+    QCOMPARE( completedSpy->size(), 1 );
+    QVERIFY(failedSpy->isEmpty());
+    QCOMPARE( authSpy->size(), 1 );
+    QCOMPARE(startTlsUpgradeSpy->size(), 1);
+}

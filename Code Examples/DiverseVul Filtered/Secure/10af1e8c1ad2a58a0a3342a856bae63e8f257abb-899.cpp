@@ -1,0 +1,1 @@
+      static short cut(const double val) { return val<(double)min()?min():val>(double)max()?max():(short)val; }

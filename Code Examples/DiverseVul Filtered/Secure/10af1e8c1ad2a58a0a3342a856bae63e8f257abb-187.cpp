@@ -1,0 +1,1 @@
+      void unlock(const unsigned int n) { pthread_mutex_unlock(&mutex[n]); }

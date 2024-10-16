@@ -1,0 +1,1 @@
+static inline void hrtimer_force_reprogram(struct hrtimer_cpu_base *base) { }

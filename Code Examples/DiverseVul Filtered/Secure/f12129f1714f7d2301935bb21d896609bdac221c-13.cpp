@@ -1,0 +1,1 @@
+int ctrl_x_mode_whole_line(void) { return ctrl_x_mode == CTRL_X_WHOLE_LINE; }

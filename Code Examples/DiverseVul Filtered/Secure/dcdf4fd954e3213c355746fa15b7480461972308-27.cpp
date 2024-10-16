@@ -1,0 +1,1 @@
+  ByteVectorPrivate() : RefCounter(), size(0) {}

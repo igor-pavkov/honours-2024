@@ -1,0 +1,1 @@
+      static float max() { return FLT_MAX; }

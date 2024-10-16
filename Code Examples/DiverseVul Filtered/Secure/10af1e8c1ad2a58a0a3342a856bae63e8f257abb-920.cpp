@@ -1,0 +1,1 @@
+      static char inf() { return max(); }

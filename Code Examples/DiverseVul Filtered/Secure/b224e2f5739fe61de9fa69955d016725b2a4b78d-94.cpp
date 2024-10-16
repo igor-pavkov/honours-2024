@@ -1,0 +1,2 @@
+SplashGouraudPattern::~SplashGouraudPattern() {
+}

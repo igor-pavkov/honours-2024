@@ -1,0 +1,1 @@
+static inline void alarmtimer_rtc_timer_init(void) { }

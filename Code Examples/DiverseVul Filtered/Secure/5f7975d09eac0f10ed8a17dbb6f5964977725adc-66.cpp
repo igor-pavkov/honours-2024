@@ -1,0 +1,1 @@
+  std::vector<uint8_t> GetOutput() { return ExtractVector<uint8_t>(output_); }

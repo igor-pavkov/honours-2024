@@ -1,0 +1,2 @@
+FontInfoScanner::~FontInfoScanner() {
+}

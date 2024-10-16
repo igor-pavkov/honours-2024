@@ -1,0 +1,1 @@
+inline DSizes dsizes_00() { return DSizes(0, 0); }

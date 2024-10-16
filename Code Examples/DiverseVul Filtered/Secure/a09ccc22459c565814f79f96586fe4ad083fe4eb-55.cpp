@@ -1,0 +1,1 @@
+  edge_clone_summary (): prev_clone (NULL), next_clone (NULL) {}

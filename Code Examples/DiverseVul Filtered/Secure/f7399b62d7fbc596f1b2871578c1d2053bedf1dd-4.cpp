@@ -1,0 +1,1 @@
+  uint32_t get_canvas_height() const { return m_height; }

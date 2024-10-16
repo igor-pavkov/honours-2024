@@ -1,0 +1,1 @@
+inline Arena* SegmentReader::getArena() { return arena; }

@@ -1,0 +1,1 @@
+      static unsigned short max() { return (unsigned short)-1; }

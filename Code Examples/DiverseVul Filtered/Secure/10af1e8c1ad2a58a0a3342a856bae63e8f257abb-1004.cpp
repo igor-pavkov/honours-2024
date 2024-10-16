@@ -1,0 +1,1 @@
+      static float nan() { return (float)cimg::type<double>::nan(); }

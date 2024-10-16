@@ -1,0 +1,1 @@
+  bool constant_p () { return m_lattice_val == IPA_BITS_CONSTANT; }

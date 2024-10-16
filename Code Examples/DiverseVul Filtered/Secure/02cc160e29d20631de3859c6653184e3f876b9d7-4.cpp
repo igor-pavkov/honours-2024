@@ -1,0 +1,1 @@
+  Status CheckExternalState() const override { return Status::OK(); }

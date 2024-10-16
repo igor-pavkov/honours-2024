@@ -1,0 +1,1 @@
+static int ntop_get_interface_remote_flows_info(lua_State* vm) { return(ntop_get_interface_flows(vm, location_remote_only));  }

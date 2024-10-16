@@ -1,0 +1,1 @@
+      static const char* string() { static const char *const s = "int"; return s; }

@@ -1,0 +1,1 @@
+      static const char* format() { return "%.17g"; }

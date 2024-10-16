@@ -1,0 +1,1 @@
+  inline bool isWritable() { return !readOnly; }

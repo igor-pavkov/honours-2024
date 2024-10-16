@@ -1,0 +1,1 @@
+      static float min() { return -FLT_MAX; }

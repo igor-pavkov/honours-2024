@@ -1,0 +1,2 @@
+SplashRadialPattern::~SplashRadialPattern() {
+}

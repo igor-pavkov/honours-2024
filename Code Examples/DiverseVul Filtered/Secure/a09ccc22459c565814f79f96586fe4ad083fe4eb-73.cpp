@@ -1,0 +1,1 @@
+  widest_int get_mask () { return m_mask; }

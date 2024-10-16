@@ -1,0 +1,1 @@
+static void hugetlb_register_all_nodes(void) { }

@@ -1,0 +1,1 @@
+nghttp2_stream* Http2Stream::operator*() const { return stream(); }

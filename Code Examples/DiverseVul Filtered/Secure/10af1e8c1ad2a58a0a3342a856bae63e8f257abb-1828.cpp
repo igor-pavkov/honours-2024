@@ -1,0 +1,1 @@
+      static unsigned char min() { return 0; }

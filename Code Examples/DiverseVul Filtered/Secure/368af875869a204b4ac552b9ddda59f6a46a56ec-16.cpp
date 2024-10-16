@@ -1,0 +1,1 @@
+  const string& filepattern() const { return filepattern_; }

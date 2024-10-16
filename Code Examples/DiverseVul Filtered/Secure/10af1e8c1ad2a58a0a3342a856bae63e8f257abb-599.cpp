@@ -1,0 +1,1 @@
+      static bool is_inf(const unsigned int) { return false; }

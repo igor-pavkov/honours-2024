@@ -1,0 +1,1 @@
+inline const word* SegmentReader::getStartPtr() { return ptr.begin(); }

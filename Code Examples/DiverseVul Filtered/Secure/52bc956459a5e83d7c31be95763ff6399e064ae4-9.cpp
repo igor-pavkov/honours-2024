@@ -1,0 +1,1 @@
+inline void ReadLimiter::reset(WordCount64 limit) { this->limit = unbound(limit / WORDS); }

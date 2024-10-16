@@ -1,0 +1,1 @@
+  size_t num_tensors() const override { return subgraph_->tensors_size(); }

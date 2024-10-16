@@ -1,0 +1,1 @@
+inline SegmentId SegmentReader::getSegmentId() { return id; }

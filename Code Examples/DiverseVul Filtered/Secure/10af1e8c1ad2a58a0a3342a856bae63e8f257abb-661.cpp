@@ -1,0 +1,1 @@
+      static int cut(const double val) { return val<(double)min()?min():val>(double)max()?max():(int)val; }

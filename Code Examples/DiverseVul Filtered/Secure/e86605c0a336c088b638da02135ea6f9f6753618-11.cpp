@@ -1,0 +1,1 @@
+  explicit CopyOp(OpKernelConstruction* ctx) : CopyOpBase(ctx) {}

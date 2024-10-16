@@ -1,0 +1,1 @@
+      static float cut(const float val) { return (float)val; }

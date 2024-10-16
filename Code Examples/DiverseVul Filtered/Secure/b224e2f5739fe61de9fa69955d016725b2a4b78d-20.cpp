@@ -1,0 +1,2 @@
+SplashFunctionPattern::~SplashFunctionPattern() {
+}

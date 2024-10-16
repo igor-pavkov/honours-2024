@@ -1,0 +1,1 @@
+  widest_int get_value () { return m_value; }

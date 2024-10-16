@@ -1,0 +1,1 @@
+	RQueueItem(SQLQuery* Q, MySQLresult* R) : q(Q), r(R) {}

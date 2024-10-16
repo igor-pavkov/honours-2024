@@ -1,0 +1,1 @@
+      _cimg_math_parser *mp;

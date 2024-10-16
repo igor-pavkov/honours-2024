@@ -1,0 +1,1 @@
+static inline void hrtimer_remove_cb_pending(struct hrtimer *timer) { }

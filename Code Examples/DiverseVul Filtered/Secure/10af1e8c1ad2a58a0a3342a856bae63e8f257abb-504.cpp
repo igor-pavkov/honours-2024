@@ -1,0 +1,1 @@
+      void lock(const unsigned int) {}

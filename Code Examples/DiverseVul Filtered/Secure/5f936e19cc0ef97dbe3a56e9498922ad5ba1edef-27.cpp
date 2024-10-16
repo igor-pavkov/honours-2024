@@ -1,0 +1,1 @@
+static inline void alarmtimer_rtc_interface_remove(void) { }

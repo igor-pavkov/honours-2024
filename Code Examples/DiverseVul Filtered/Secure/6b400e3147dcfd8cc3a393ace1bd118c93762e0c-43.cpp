@@ -1,0 +1,4 @@
+QPaintEngineExPrivate::~QPaintEngineExPrivate()
+{
+    delete strokeHandler;
+}

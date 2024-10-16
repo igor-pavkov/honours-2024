@@ -1,0 +1,1 @@
+      static int inf() { return max(); }

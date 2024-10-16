@@ -1,0 +1,1 @@
+  int num_files() const { return sss_.size(); }

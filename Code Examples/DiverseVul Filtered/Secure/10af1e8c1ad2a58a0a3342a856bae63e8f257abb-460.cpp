@@ -1,0 +1,1 @@
+      static long double cut(const long double val) { return val; }

@@ -1,0 +1,1 @@
+  virtual bool enchant_default_with_arg_processor(void *arg) { return 0; }

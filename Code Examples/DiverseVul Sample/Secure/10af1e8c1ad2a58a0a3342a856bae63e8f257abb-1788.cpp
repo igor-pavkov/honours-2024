@@ -1,0 +1,1 @@
+      static bool is_nan(const T) { return false; }

@@ -1,0 +1,1 @@
+  std::vector<int16_t> GetOutput() { return ExtractVector<int16_t>(output_); }

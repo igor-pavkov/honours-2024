@@ -1,0 +1,1 @@
+      static bool is_nan(const cimg_uint64) { return false; }

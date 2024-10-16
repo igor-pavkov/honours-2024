@@ -1,0 +1,3 @@
+vncProperties::~vncProperties()
+{
+}

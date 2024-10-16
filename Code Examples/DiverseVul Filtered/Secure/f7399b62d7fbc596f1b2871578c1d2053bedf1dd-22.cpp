@@ -1,0 +1,1 @@
+  uint16_t get_rows() const { return m_rows; }

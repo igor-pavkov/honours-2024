@@ -1,0 +1,1 @@
+  size_t get_num_offsets() const { return m_offsets.size(); }

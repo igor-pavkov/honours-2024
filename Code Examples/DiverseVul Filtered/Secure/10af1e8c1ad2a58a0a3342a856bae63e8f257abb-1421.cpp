@@ -1,0 +1,1 @@
+      static char max() { return (char)-1; }

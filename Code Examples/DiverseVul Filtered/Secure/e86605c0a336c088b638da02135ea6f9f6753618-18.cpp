@@ -1,0 +1,1 @@
+  explicit InplaceOp(OpKernelConstruction* ctx) : InplaceOpBase(ctx) {}

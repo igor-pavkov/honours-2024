@@ -1,0 +1,1 @@
+  uint32_t get_canvas_width() const { return m_width; }

@@ -1,0 +1,1 @@
+  virtual unsigned int execute (function *) { return ipcp_driver (); }

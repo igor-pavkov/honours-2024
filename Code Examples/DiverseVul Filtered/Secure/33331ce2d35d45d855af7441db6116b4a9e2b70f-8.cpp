@@ -1,0 +1,1 @@
+    TrackSampleReader(AP4_Track& track) : m_Track(track), m_SampleIndex(0) {}

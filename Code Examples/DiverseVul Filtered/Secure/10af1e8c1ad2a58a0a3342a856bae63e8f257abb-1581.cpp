@@ -1,0 +1,1 @@
+      static half min() { return (half)-65504; }

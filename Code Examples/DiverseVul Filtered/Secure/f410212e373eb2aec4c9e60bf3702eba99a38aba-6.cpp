@@ -1,0 +1,1 @@
+  explicit BincountOp(OpKernelConstruction* ctx) : OpKernel(ctx) {}

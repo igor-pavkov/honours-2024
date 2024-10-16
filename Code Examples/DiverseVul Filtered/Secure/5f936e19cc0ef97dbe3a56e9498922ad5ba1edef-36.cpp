@@ -1,0 +1,1 @@
+static inline int alarmtimer_rtc_interface_setup(void) { return 0; }

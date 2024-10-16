@@ -1,0 +1,1 @@
+GIntBig OGRKMLLayer::GetFeatureCount( int /* bForce */ ) { return 0; }

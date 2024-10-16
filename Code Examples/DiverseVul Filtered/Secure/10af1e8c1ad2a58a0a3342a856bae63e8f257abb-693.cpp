@@ -1,0 +1,1 @@
+      static short inf() { return max(); }

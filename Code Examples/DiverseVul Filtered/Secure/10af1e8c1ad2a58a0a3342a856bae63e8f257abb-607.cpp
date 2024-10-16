@@ -1,0 +1,1 @@
+      static bool is_float() { return false; }

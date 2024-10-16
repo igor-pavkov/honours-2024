@@ -1,0 +1,13 @@
+static void init_ordered4_dither(int line)
+{
+    static int const dither4x4[] =
+    {
+        0x00, 0x80, 0x20, 0xa0,
+        0xc0, 0x40, 0xe0, 0x60,
+        0x30, 0xb0, 0x10, 0x90,
+        0xf0, 0x70, 0xd0, 0x50
+    };
+
+    ordered4_table = dither4x4 + (line % 4) * 4;
+    ordered4_index = 0;
+}

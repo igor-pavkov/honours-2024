@@ -1,0 +1,1 @@
+static inline void destroy_context_ldt(struct mm_struct *mm) {}

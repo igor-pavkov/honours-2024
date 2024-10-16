@@ -1,0 +1,1 @@
+  uint32_t get_width() const { return m_output_width; }

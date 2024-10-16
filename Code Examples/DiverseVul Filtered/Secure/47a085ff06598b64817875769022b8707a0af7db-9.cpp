@@ -1,0 +1,1 @@
+    virtual LogTags *loggingTags() const { return ale ? &ale->cache.code : nullptr; }

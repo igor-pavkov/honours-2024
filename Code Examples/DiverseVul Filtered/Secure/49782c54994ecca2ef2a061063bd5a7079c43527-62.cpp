@@ -1,0 +1,4 @@
+PHP_FUNCTION(ldap_mod_del)
+{
+	php_ldap_do_modify(INTERNAL_FUNCTION_PARAM_PASSTHRU, LDAP_MOD_DELETE);
+}

@@ -1,0 +1,1 @@
+    ByteVectorMirror(const ByteVector &source) : v(source) {}

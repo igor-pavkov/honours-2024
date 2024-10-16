@@ -1,0 +1,6 @@
+static PHP_MSHUTDOWN_FUNCTION(pcre)
+{
+	UNREGISTER_INI_ENTRIES();
+
+	return SUCCESS;
+}

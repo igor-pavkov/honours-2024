@@ -1,0 +1,1 @@
+            bool isCodeWithScope() const { return _startPosition & (1 << 31); }

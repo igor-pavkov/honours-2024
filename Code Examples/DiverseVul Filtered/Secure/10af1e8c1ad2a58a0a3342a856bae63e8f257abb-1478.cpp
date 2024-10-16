@@ -1,0 +1,1 @@
+      static unsigned int max() { return (unsigned int)-1; }

@@ -1,0 +1,3 @@
+    string expectedResult() {
+        return "a";
+    }

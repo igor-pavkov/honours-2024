@@ -1,0 +1,72 @@
+static int AppLayerProtoDetectTest06(void)
+{
+    AppLayerProtoDetectUnittestCtxBackup();
+    AppLayerProtoDetectSetup();
+
+    uint8_t l7data[] = "220 Welcome to the OISF FTP server\r\n";
+    const char *buf;
+    int r = 0;
+    Flow f;
+    AppProto pm_results[ALPROTO_MAX];
+    AppLayerProtoDetectThreadCtx *alpd_tctx;
+
+    memset(&f, 0x00, sizeof(f));
+    f.protomap = FlowGetProtoMapping(IPPROTO_TCP);
+
+    buf = "HTTP";
+    AppLayerProtoDetectPMRegisterPatternCS(IPPROTO_TCP, ALPROTO_HTTP, buf, 4, 0, STREAM_TOCLIENT);
+    buf = "220 ";
+    AppLayerProtoDetectPMRegisterPatternCS(IPPROTO_TCP, ALPROTO_FTP, buf, 4, 0, STREAM_TOCLIENT);
+
+    AppLayerProtoDetectPrepareState();
+    /* AppLayerProtoDetectGetCtxThread() should be called post AppLayerProtoDetectPrepareState(), since
+     * it sets internal structures which depends on the above function. */
+    alpd_tctx = AppLayerProtoDetectGetCtxThread();
+
+    if (alpd_ctx.ctx_ipp[FLOW_PROTO_TCP].ctx_pm[0].max_pat_id != 0) {
+        printf("alpd_ctx.ctx_ipp[FLOW_PROTO_TCP].ctx_pm[0].max_pat_id != 0\n");
+        goto end;
+    }
+    if (alpd_ctx.ctx_ipp[FLOW_PROTO_TCP].ctx_pm[1].max_pat_id != 2) {
+        printf("alpd_ctx.ctx_ipp[FLOW_PROTO_TCP].ctx_pm[1].max_pat_id != 2\n");
+        goto end;
+    }
+
+    if (alpd_ctx.ctx_ipp[FLOW_PROTO_TCP].ctx_pm[0].map != NULL) {
+        printf("alpd_ctx.ctx_ipp[FLOW_PROTO_TCP].ctx_pm[0].map != NULL\n");
+        goto end;
+    }
+    if (alpd_ctx.ctx_ipp[FLOW_PROTO_TCP].ctx_pm[1].map == NULL) {
+        printf("alpd_ctx.ctx_ipp[FLOW_PROTO_TCP].ctx_pm[1].map != NULL\n");
+        goto end;
+    }
+
+    if (alpd_ctx.ctx_ipp[FLOW_PROTO_TCP].ctx_pm[1].map[0]->alproto != ALPROTO_FTP) {
+        printf("alpd_ctx.ctx_ipp[FLOW_PROTO_TCP].ctx_pm[1].map[0].alproto != ALPROTO_FTP\n");
+        goto end;
+    }
+    if (alpd_ctx.ctx_ipp[FLOW_PROTO_TCP].ctx_pm[1].map[1]->alproto != ALPROTO_HTTP) {
+        printf("alpd_ctx.ctx_ipp[FLOW_PROTO_TCP].ctx_pm[1].map[1].alproto != ALPROTO_HTTP\n");
+        goto end;
+    }
+
+    uint32_t cnt = AppLayerProtoDetectPMGetProto(alpd_tctx,
+                                                 &f,
+                                                 l7data, sizeof(l7data),
+                                                 STREAM_TOCLIENT,
+                                                 IPPROTO_TCP,
+                                                 pm_results);
+    if (cnt != 1 && pm_results[0] != ALPROTO_FTP) {
+        printf("cnt != 1 && pm_results[0] != AlPROTO_FTP\n");
+        goto end;
+    }
+
+    r = 1;
+
+ end:
+    if (alpd_tctx != NULL)
+        AppLayerProtoDetectDestroyCtxThread(alpd_tctx);
+    AppLayerProtoDetectDeSetup();
+    AppLayerProtoDetectUnittestCtxRestore();
+    return r;
+}

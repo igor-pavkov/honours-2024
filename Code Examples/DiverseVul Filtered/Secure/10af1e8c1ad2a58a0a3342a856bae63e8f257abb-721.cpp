@@ -1,0 +1,1 @@
+      static double min() { return -DBL_MAX; }

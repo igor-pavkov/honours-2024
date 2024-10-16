@@ -1,0 +1,1 @@
+      static signed char min() { return ~max(); }
