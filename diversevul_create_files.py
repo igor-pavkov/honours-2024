@@ -2,6 +2,9 @@ import json
 from pathlib import Path
 import subprocess as sp
 
+# Run to filter through DiverseVul and save code examples to the specified directory
+# Syntax-checking step may take multiple hours
+
 # True if file contains syntax errors, false otherwise
 def hasSyntaxErrors(ex):
         args = "cppcheck --enable=all " + '"' + str(ex) + '"'

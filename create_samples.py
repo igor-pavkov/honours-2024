@@ -41,7 +41,6 @@ dataset = json.load(file)
 sec_cwes = {} 
 
 # Go through every secure code file
-
 for ex in source_sec.iterdir():
     id = ex.name.split("-")[0]
     
@@ -67,7 +66,7 @@ vul_train = vul_list[:cutoff]
 vul_test = vul_list[cutoff:]
 
 
-split = 1
+split = 1 # All code in training set
 cutoff = len(vul_list)*split
 i = 0 # current example index
 
